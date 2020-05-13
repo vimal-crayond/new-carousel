@@ -12,26 +12,36 @@
             border-radius: 8px;
             border: 0px;
             outline: none;
+            margin: 10px 10px;
+        }
+        .span1:hover,.span2:hover,.span3:hover{
+            cursor: pointer;
         }
         .active{
             background-color:#737373;
         }
         .img-1{
-            position: relative;
+            
            
         }
         .img-2{
+            
+        }
+        .img-3{
+            
+        }
+        .image-1{
+            position: relative;
+        }
+        .image-2{
             position: absolute;
             left: 25px;
             top: -25px;
-            transition: 2s all;
         }
-        .img-3{
+        .image-3{
             position: absolute;
             left: 50px;
-            top: -80px;
-            transition: 2s all;
-            
+            top: -50px;
         }
         img{
             width: 400px;
@@ -40,6 +50,10 @@
         .top-margin{
             margin-top: 100px;
             position: relative;
+            width: 35%;
+            margin: auto;
+            
+
         }
         #three:hover{
             cursor: pointer;
@@ -51,30 +65,22 @@
 <body>
     <div class="top-margin">
         <div class="container img" >
-            <img src="./image/clarity.png"   class="1 img-1 img" id="one"   alt="">
-            <img src="./image/Deploy.png" class="2 img-2 img" id="two"  alt="">
-            <img src="./image/culture.png" class="3 img-3 img" id="three"  alt="">
+            <img src="./image/gather-2.jpg"   class="1 img-1 img image-1" id="one"   alt="">
+            <img src="./image/gather-1.png" class="2 img-2 img image-2" id="two"  alt="">
+            <img src="./image/index.jpg" class="3 img-3 img image-3" id="three"  alt="">
         </div>
-        <button id="img1">image-1</button>
-        <button class="span1" onclick="img1()"></button>
-        <button id="img2">image-2</button>
-        <button class="span2" onclick="img2()"></button>
-        <button id="img3">image-3</button>
-        <button class="span3" onclick="img3()"></button>
+        <div style="display: flex;justify-content: center;">
+            <button id="img3" class="span3" ></button>
+            <button id="img2" class="span2" ></button>
+            <button id="img1" class="span1" ></button>
+        </div>
+       
         
     </div>
     
 </body>
 <script>
-    function img1(){
-        
-    }
-    function img2(){
-        
-    }
-    function img3(){
-        
-    }
+    
 $(Document).ready(function(){
     $("#img2").click(function(){
         $(".span2").addClass("active");
@@ -83,16 +89,16 @@ $(Document).ready(function(){
         $(".img-1").animate({left:25,top:-25, opacity:"hide"}, 100);
         $(".img-1").animate({left:0,top:0, opacity:"show"}, 200);
         setTimeout(function(){
-            $(".img-1").removeClass("src", "./image/Deploy.png");
-            $(".img-1").removeAttr("src", "./image/clarity.png");
-            $(".img-1").attr("src", "./image/culture.png");
+            $(".img-1").removeClass("src", "./image/gather-1.png");
+            $(".img-1").removeAttr("src", "./image/index.jpg");
+            $(".img-1").attr("src", "./image/gather-2.jpg");
         },200);
-        $(".img-2").removeClass("src", "./image/Deploy.png");
-        $(".img-2").removeAttr("src", "./image/culture.png");
-        $(".img-2").attr("src", "./image/clarity.png");
-        $(".img-3").removeClass("src", "./image/clarity.png");
-        $(".img-3").removeAttr("src", "./image/culture.png");
-        $(".img-3").attr("src", "./image/Deploy.png");
+        $(".img-2").removeClass("src", "./image/gather-1.png");
+        $(".img-2").removeAttr("src", "./image/gather-2.jpg");
+        $(".img-2").attr("src", "./image/index.jpg");
+        $(".img-3").removeClass("src", "./image/index.jpg");
+        $(".img-3").removeAttr("src", "./image/gather-2.jpg");
+        $(".img-3").attr("src", "./image/gather-1.png");
     });
     $("#img1").click(function(){
         $(".span1").addClass("active");
@@ -101,16 +107,16 @@ $(Document).ready(function(){
         $(".img-1").animate({left:25,top:-25, opacity:"hide"}, 100);
         $(".img-1").animate({left:0,top:0, opacity:"show"}, 200);
         setTimeout(function(){
-        $(".img-1").removeAttr("src", "./image/Deploy.png");
-        $(".img-1").removeAttr("src", "./image/culture.png");
-        $(".img-1").attr("src", "./image/clarity.png");
+        $(".img-1").removeAttr("src", "./image/gather-1.png");
+        $(".img-1").removeAttr("src", "./image/gather-2.jpg");
+        $(".img-1").attr("src", "./image/index.jpg");
         },200);
-        $(".img-2").removeAttr("src", "./image/clarity.png");
-        $(".img-2").removeAttr("src", "./image/culture.png");
-        $(".img-2").attr("src", "./image/Deploy.png");
-        $(".img-3").removeAttr("src", "./image/Deploy.png");
-        $(".img-3").removeAttr("src", "./image/clarity.png");
-        $(".img-3").attr("src", "./image/culture.png");
+        $(".img-2").removeAttr("src", "./image/index.jpg");
+        $(".img-2").removeAttr("src", "./image/gather-2.jpg");
+        $(".img-2").attr("src", "./image/gather-1.png");
+        $(".img-3").removeAttr("src", "./image/gather-1.png");
+        $(".img-3").removeAttr("src", "./image/index.jpg");
+        $(".img-3").attr("src", "./image/gather-2.jpg");
     });
     $("#img3").click(function(){
         $(".span3").addClass("active");
@@ -118,16 +124,16 @@ $(Document).ready(function(){
         $(".span2").removeClass("active");
         $(".img-1").animate({left:25,top:-25, opacity:"hide"}, 100);
         $(".img-1").animate({left:0,top:0, opacity:"show"}, 200);
-        $(".img-3").removeClass("src", "./image/Deploy.png");
-        $(".img-3").removeAttr("src", "./image/culture.png");
-        $(".img-3").attr("src", "./image/clarity.png");
-        $(".img-2").removeClass("src", "./image/clarity.png");
-        $(".img-2").removeAttr("src", "./image/Deploy.png");
-        $(".img-2").attr("src", "./image/culture.png");
+        $(".img-3").removeClass("src", "./image/gather-1.png");
+        $(".img-3").removeAttr("src", "./image/gather-2.jpg");
+        $(".img-3").attr("src", "./image/index.jpg");
+        $(".img-2").removeClass("src", "./image/index.jpg");
+        $(".img-2").removeAttr("src", "./image/gather-1.png");
+        $(".img-2").attr("src", "./image/gather-2.jpg");
         setTimeout(function(){
-        $(".img-1").removeClass("src", "./image/culture.png");
-        $(".img-1").removeAttr("src", "./image/clarity.png");
-        $(".img-1").attr("src", "./image/Deploy.png");
+        $(".img-1").removeClass("src", "./image/gather-2.jpg");
+        $(".img-1").removeAttr("src", "./image/index.jpg");
+        $(".img-1").attr("src", "./image/gather-1.png");
         },200);
     });
     $("#two").click(function(){
