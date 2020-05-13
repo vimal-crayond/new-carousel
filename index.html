@@ -13,14 +13,15 @@
         }
         .img-2{
             position: absolute;
-            left: 50px;
-            top: -50px;
-            
+            left: 25px;
+            top: -25px;
+            transition: 2s;
         }
         .img-3{
             position: absolute;
-            left: 100px;
-            top: -120px;
+            left: 50px;
+            top: -80px;
+            transition: 2s;
             
         }
         img{
@@ -54,71 +55,55 @@
 <script>
 $(Document).ready(function(){
     $("#img2").click(function(){
-        
-        
-    //         $(".img-3").animate({left:200, opacity:"hide"}, 1000);
-    // $(".img-3").animate({left:100, opacity:"show"}, 1900);
-    // setTimeout(function(){
+        $(".img-1").animate({left:25,top:-25, opacity:"hide"}, 100);
+        $(".img-1").animate({left:0,top:0, opacity:"show"}, 200);
+        setTimeout(function(){
+            $(".img-1").removeClass("src", "./image/Deploy.png");
+            $(".img-1").removeAttr("src", "./image/clarity.png");
+            $(".img-1").attr("src", "./image/culture.png");
+        },200);
+        $(".img-2").removeClass("src", "./image/Deploy.png");
+        $(".img-2").removeAttr("src", "./image/culture.png");
+        $(".img-2").attr("src", "./image/clarity.png");
         $(".img-3").removeClass("src", "./image/clarity.png");
         $(".img-3").removeAttr("src", "./image/culture.png");
         $(".img-3").attr("src", "./image/Deploy.png");
-    // },1200);
-    // ////////
-    $(".img-2").removeClass("src", "./image/Deploy.png");
-    $(".img-2").removeAttr("src", "./image/culture.png");
-    $(".img-2").attr("src", "./image/clarity.png");
-    
-    // /////////
-    $(".img-1").animate({left:50,top:-50, opacity:"hide"}, 200);
-    $(".img-1").animate({left:0,top:0, opacity:"show"}, 500);
-    setTimeout(function(){
-        $(".img-1").removeClass("src", "./image/Deploy.png");
+    });
+    $("#img1").click(function(){
+        $(".img-1").animate({left:25,top:-25, opacity:"hide"}, 100);
+        $(".img-1").animate({left:0,top:0, opacity:"show"}, 200);
+        setTimeout(function(){
+        $(".img-1").removeAttr("src", "./image/Deploy.png");
+        $(".img-1").removeAttr("src", "./image/culture.png");
+        $(".img-1").attr("src", "./image/clarity.png");
+        },200);
+        $(".img-2").removeAttr("src", "./image/clarity.png");
+        $(".img-2").removeAttr("src", "./image/culture.png");
+        $(".img-2").attr("src", "./image/Deploy.png");
+        $(".img-3").removeAttr("src", "./image/Deploy.png");
+        $(".img-3").removeAttr("src", "./image/clarity.png");
+        $(".img-3").attr("src", "./image/culture.png");
+    });
+    $("#img3").click(function(){
+        $(".img-1").animate({left:25,top:-25, opacity:"hide"}, 100);
+        $(".img-1").animate({left:0,top:0, opacity:"show"}, 200);
+        $(".img-3").removeClass("src", "./image/Deploy.png");
+        $(".img-3").removeAttr("src", "./image/culture.png");
+        $(".img-3").attr("src", "./image/clarity.png");
+        $(".img-2").removeClass("src", "./image/clarity.png");
+        $(".img-2").removeAttr("src", "./image/Deploy.png");
+        $(".img-2").attr("src", "./image/culture.png");
+        setTimeout(function(){
+        $(".img-1").removeClass("src", "./image/culture.png");
         $(".img-1").removeAttr("src", "./image/clarity.png");
-        $(".img-1").attr("src", "./image/culture.png");
-    },400);
-
-  });
-
-  $("#img1").click(function(){
-    $(".img-1").animate({left:50,top:-50, opacity:"hide"}, 200);
-    $(".img-1").animate({left:0,top:0, opacity:"show"}, 500);
-    setTimeout(function(){
-    $(".img-1").removeAttr("src", "./image/Deploy.png");
-    $(".img-1").removeAttr("src", "./image/culture.png");
-    $(".img-1").attr("src", "./image/clarity.png");
-    },400);
-    $(".img-2").removeAttr("src", "./image/clarity.png");
-    $(".img-2").removeAttr("src", "./image/culture.png");
-    $(".img-2").attr("src", "./image/Deploy.png");
-    $(".img-3").removeAttr("src", "./image/Deploy.png");
-    $(".img-3").removeAttr("src", "./image/clarity.png");
-    $(".img-3").attr("src", "./image/culture.png");
-  });
-  $("#img3").click(function(){
-    $(".img-1").animate({left:50,top:-50, opacity:"hide"}, 200);
-    $(".img-1").animate({left:0,top:0, opacity:"show"}, 500);
-    $(".img-3").removeClass("src", "./image/Deploy.png");
-    $(".img-3").removeAttr("src", "./image/culture.png");
-    $(".img-3").attr("src", "./image/clarity.png");
-    $(".img-2").removeClass("src", "./image/clarity.png");
-    $(".img-2").removeAttr("src", "./image/Deploy.png");
-    $(".img-2").attr("src", "./image/culture.png");
-    setTimeout(function(){
-    $(".img-1").removeClass("src", "./image/culture.png");
-    $(".img-1").removeAttr("src", "./image/clarity.png");
-    $(".img-1").attr("src", "./image/Deploy.png");
-    },400);
-  });
-  
-
-
-  $("#two").click(function(){
-      
+        $(".img-1").attr("src", "./image/Deploy.png");
+        },200);
+    });
+    $("#two").click(function(){
         var a = document.getElementsByTagName("img")[0].getAttribute("src");
         var b = document.getElementsByTagName("img")[1].getAttribute("src");
         var c = document.getElementsByTagName("img")[2].getAttribute("src");
-
-            $(".img-1").animate({left:50,top:-50, opacity:"hide"}, 200);
+            $(".img-1").animate({left:25,top:-25, opacity:"hide"}, 200);
             $(".img-1").animate({left:0,top:0, opacity:"show"}, 500);
             $(".img-3").removeClass("src", a);
             $(".img-3").removeAttr("src", c);
@@ -130,15 +115,14 @@ $(Document).ready(function(){
             $(".img-1").removeClass("src", a);
             $(".img-1").removeAttr("src", c);
             $(".img-1").attr("src", c);
-            },400);
-  });  
-  $("#one").click(function(){
-      
+            },200);
+    });  
+    $("#one").click(function(){
       var a = document.getElementsByTagName("img")[0].getAttribute("src");
       var b = document.getElementsByTagName("img")[1].getAttribute("src");
       var c = document.getElementsByTagName("img")[2].getAttribute("src");
-          $(".img-1").animate({left:50,top:-50, opacity:"hide"}, 200);
-          $(".img-1").animate({left:0,top:0, opacity:"show"}, 500);
+          $(".img-1").animate({left:25,top:-25, opacity:"hide"}, 100);
+          $(".img-1").animate({left:0,top:0, opacity:"show"}, 200);
           $(".img-3").removeClass("src", a);
           $(".img-3").removeAttr("src", c);
           $(".img-3").attr("src",a);
@@ -149,26 +133,8 @@ $(Document).ready(function(){
           $(".img-1").removeClass("src", a);
           $(".img-1").removeAttr("src", c);
           $(".img-1").attr("src", b);
-          },400);
-      
-});       
-
-
-//   $(".3").click(function(){
-//     // $(".img-1").animate({left:50,top:-50, opacity:"hide"}, 200);
-//     // $(".img-1").animate({left:0,top:0, opacity:"show"}, 500);
-//     $(".img-3").removeClass("src", "./image/Deploy.png");
-//     $(".img-3").removeAttr("src", "./image/culture.png");
-//     $(".img-2").removeClass("src", "./image/clarity.png");
-//     $(".img-2").removeAttr("src", "./image/Deploy.png");
-//     $(".img-3").attr("src", "./image/clarity.png");
-//     $(".img-2").attr("src", "./image/culture.png");
-//     setTimeout(function(){
-//     $(".img-1").removeClass("src", "./image/culture.png");
-//     $(".img-1").removeAttr("src", "./image/clarity.png");
-//     $(".img-1").attr("src", "./image/Deploy.png");
-//     },400);
-//   });
+          },200);
+    });       
 });
 </script>
 
