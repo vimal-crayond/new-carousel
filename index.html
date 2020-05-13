@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .img-1{
+            position: relative;
+           
+        }
+        .img-2{
+            position: absolute;
+            left: 50px;
+            top: -50px;
+            
+        }
+        .img-3{
+            position: absolute;
+            left: 100px;
+            top: -120px;
+            
+        }
+        img{
+            width: 400px;
+            height: auto;
+        }
+        .top-margin{
+            margin-top: 100px;
+            position: relative;
+        }
+        #three:hover{
+            cursor: pointer;
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <div class="top-margin">
+        <div class="container img" >
+            <img src="./image/clarity.png"   class="1 img-1 img" id="one"   alt="">
+            <img src="./image/Deploy.png" class="2 img-2 img" id="two"  alt="">
+            <img src="./image/culture.png" class="3 img-3 img" id="three"  alt="">
+        </div>
+        <button id="img3">image-3</button>
+        <button id="img2">image-2</button>
+        <button id="img1">image-1</button>
+    </div>
+    
+</body>
+<script>
+$(Document).ready(function(){
+    $("#img2").click(function(){
+        
+        
+    //         $(".img-3").animate({left:200, opacity:"hide"}, 1000);
+    // $(".img-3").animate({left:100, opacity:"show"}, 1900);
+    // setTimeout(function(){
+        $(".img-3").removeClass("src", "./image/clarity.png");
+        $(".img-3").removeAttr("src", "./image/culture.png");
+        $(".img-3").attr("src", "./image/Deploy.png");
+    // },1200);
+    // ////////
+    $(".img-2").removeClass("src", "./image/Deploy.png");
+    $(".img-2").removeAttr("src", "./image/culture.png");
+    $(".img-2").attr("src", "./image/clarity.png");
+    
+    // /////////
+    $(".img-1").animate({left:50,top:-50, opacity:"hide"}, 200);
+    $(".img-1").animate({left:0,top:0, opacity:"show"}, 500);
+    setTimeout(function(){
+        $(".img-1").removeClass("src", "./image/Deploy.png");
+        $(".img-1").removeAttr("src", "./image/clarity.png");
+        $(".img-1").attr("src", "./image/culture.png");
+    },400);
+
+  });
+
+  $("#img1").click(function(){
+    $(".img-1").animate({left:50,top:-50, opacity:"hide"}, 200);
+    $(".img-1").animate({left:0,top:0, opacity:"show"}, 500);
+    setTimeout(function(){
+    $(".img-1").removeAttr("src", "./image/Deploy.png");
+    $(".img-1").removeAttr("src", "./image/culture.png");
+    $(".img-1").attr("src", "./image/clarity.png");
+    },400);
+    $(".img-2").removeAttr("src", "./image/clarity.png");
+    $(".img-2").removeAttr("src", "./image/culture.png");
+    $(".img-2").attr("src", "./image/Deploy.png");
+    $(".img-3").removeAttr("src", "./image/Deploy.png");
+    $(".img-3").removeAttr("src", "./image/clarity.png");
+    $(".img-3").attr("src", "./image/culture.png");
+  });
+  $("#img3").click(function(){
+    $(".img-1").animate({left:50,top:-50, opacity:"hide"}, 200);
+    $(".img-1").animate({left:0,top:0, opacity:"show"}, 500);
+    $(".img-3").removeClass("src", "./image/Deploy.png");
+    $(".img-3").removeAttr("src", "./image/culture.png");
+    $(".img-3").attr("src", "./image/clarity.png");
+    $(".img-2").removeClass("src", "./image/clarity.png");
+    $(".img-2").removeAttr("src", "./image/Deploy.png");
+    $(".img-2").attr("src", "./image/culture.png");
+    setTimeout(function(){
+    $(".img-1").removeClass("src", "./image/culture.png");
+    $(".img-1").removeAttr("src", "./image/clarity.png");
+    $(".img-1").attr("src", "./image/Deploy.png");
+    },400);
+  });
+  
+
+
+  $("#two").click(function(){
+      
+        var a = document.getElementsByTagName("img")[0].getAttribute("src");
+        var b = document.getElementsByTagName("img")[1].getAttribute("src");
+        var c = document.getElementsByTagName("img")[2].getAttribute("src");
+
+            $(".img-1").animate({left:50,top:-50, opacity:"hide"}, 200);
+            $(".img-1").animate({left:0,top:0, opacity:"show"}, 500);
+            $(".img-3").removeClass("src", a);
+            $(".img-3").removeAttr("src", c);
+            $(".img-3").attr("src",b);
+            $(".img-2").removeClass("src", a);
+            $(".img-2").removeAttr("src", c);
+            $(".img-2").attr("src", a);
+            setTimeout(function(){
+            $(".img-1").removeClass("src", a);
+            $(".img-1").removeAttr("src", c);
+            $(".img-1").attr("src", c);
+            },400);
+  });  
+  $("#one").click(function(){
+      
+      var a = document.getElementsByTagName("img")[0].getAttribute("src");
+      var b = document.getElementsByTagName("img")[1].getAttribute("src");
+      var c = document.getElementsByTagName("img")[2].getAttribute("src");
+          $(".img-1").animate({left:50,top:-50, opacity:"hide"}, 200);
+          $(".img-1").animate({left:0,top:0, opacity:"show"}, 500);
+          $(".img-3").removeClass("src", a);
+          $(".img-3").removeAttr("src", c);
+          $(".img-3").attr("src",a);
+          $(".img-2").removeClass("src", a);
+          $(".img-2").removeAttr("src", c);
+          $(".img-2").attr("src", c);
+          setTimeout(function(){
+          $(".img-1").removeClass("src", a);
+          $(".img-1").removeAttr("src", c);
+          $(".img-1").attr("src", b);
+          },400);
+      
+});       
+
+
+//   $(".3").click(function(){
+//     // $(".img-1").animate({left:50,top:-50, opacity:"hide"}, 200);
+//     // $(".img-1").animate({left:0,top:0, opacity:"show"}, 500);
+//     $(".img-3").removeClass("src", "./image/Deploy.png");
+//     $(".img-3").removeAttr("src", "./image/culture.png");
+//     $(".img-2").removeClass("src", "./image/clarity.png");
+//     $(".img-2").removeAttr("src", "./image/Deploy.png");
+//     $(".img-3").attr("src", "./image/clarity.png");
+//     $(".img-2").attr("src", "./image/culture.png");
+//     setTimeout(function(){
+//     $(".img-1").removeClass("src", "./image/culture.png");
+//     $(".img-1").removeAttr("src", "./image/clarity.png");
+//     $(".img-1").attr("src", "./image/Deploy.png");
+//     },400);
+//   });
+});
+</script>
+
+</html>
+
+
