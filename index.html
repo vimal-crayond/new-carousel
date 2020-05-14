@@ -90,12 +90,20 @@ $(Document).ready(function(){
         $(".img-1").animate({left:0,top:0, opacity:"show"}, 200);
         setTimeout(function(){
             $(".img-1").removeClass("src", "./image/gather-1.png");
-            $(".img-1").removeAttr("src", "./image/index.jpg");
-            $(".img-1").attr("src", "./image/gather-2.jpg");
+            $(".img-1").removeAttr("src", "./image/gather-2.jpg");
+            $(".img-1").attr("src", "./image/index.jpg");
         },200);
+        $(".img-2").hide();
+$(".img-2").animate({left:-15,top:15},80);
+$(".img-2").hide();
+$(".img-2").animate({left:25,top:-25, opacity:"show"},100);
         $(".img-2").removeClass("src", "./image/gather-1.png");
-        $(".img-2").removeAttr("src", "./image/gather-2.jpg");
-        $(".img-2").attr("src", "./image/index.jpg");
+        $(".img-2").removeAttr("src", "./image/index.jpg");
+        $(".img-2").attr("src", "./image/gather-2.jpg");
+        $(".img-3").hide();
+$(".img-3").animate({left:-35,top:35},80);
+$(".img-3").hide();
+$(".img-3").animate({left:50,top:-50, opacity:"show"},100);
         $(".img-3").removeClass("src", "./image/index.jpg");
         $(".img-3").removeAttr("src", "./image/gather-2.jpg");
         $(".img-3").attr("src", "./image/gather-1.png");
@@ -107,34 +115,50 @@ $(Document).ready(function(){
         $(".img-1").animate({left:25,top:-25, opacity:"hide"}, 100);
         $(".img-1").animate({left:0,top:0, opacity:"show"}, 200);
         setTimeout(function(){
-        $(".img-1").removeAttr("src", "./image/gather-1.png");
+        $(".img-1").removeAttr("src", "./image/index.png");
         $(".img-1").removeAttr("src", "./image/gather-2.jpg");
-        $(".img-1").attr("src", "./image/index.jpg");
+        $(".img-1").attr("src", "./image/gather-1.png");
         },200);
-        $(".img-2").removeAttr("src", "./image/index.jpg");
+        $(".img-2").hide();
+$(".img-2").animate({left:-15,top:15},80);
+$(".img-2").hide();
+$(".img-2").animate({left:25,top:-25, opacity:"show"},100);
+        $(".img-2").removeAttr("src", "./image/gather-1.jpg");
         $(".img-2").removeAttr("src", "./image/gather-2.jpg");
-        $(".img-2").attr("src", "./image/gather-1.png");
+        $(".img-2").attr("src", "./image/index.jpg");
+        $(".img-3").hide();
+$(".img-3").animate({left:-35,top:35},80);
+$(".img-3").hide();
+$(".img-3").animate({left:50,top:-50, opacity:"show"},100); 
         $(".img-3").removeAttr("src", "./image/gather-1.png");
         $(".img-3").removeAttr("src", "./image/index.jpg");
         $(".img-3").attr("src", "./image/gather-2.jpg");
     });
     $("#img3").click(function(){
         $(".span3").addClass("active");
-        $(".span1").removeClass("active");
         $(".span2").removeClass("active");
+        $(".span1").removeClass("active");
         $(".img-1").animate({left:25,top:-25, opacity:"hide"}, 100);
         $(".img-1").animate({left:0,top:0, opacity:"show"}, 200);
-        $(".img-3").removeClass("src", "./image/gather-1.png");
-        $(".img-3").removeAttr("src", "./image/gather-2.jpg");
-        $(".img-3").attr("src", "./image/index.jpg");
-        $(".img-2").removeClass("src", "./image/index.jpg");
-        $(".img-2").removeAttr("src", "./image/gather-1.png");
-        $(".img-2").attr("src", "./image/gather-2.jpg");
         setTimeout(function(){
-        $(".img-1").removeClass("src", "./image/gather-2.jpg");
-        $(".img-1").removeAttr("src", "./image/index.jpg");
-        $(".img-1").attr("src", "./image/gather-1.png");
+        $(".img-1").removeAttr("src", "./image/index.png");
+        $(".img-1").removeAttr("src", "./image/gather-1.png");
+        $(".img-1").attr("src", "./image/gather-2.jpg");
         },200);
+        $(".img-2").hide();
+$(".img-2").animate({left:-15,top:15},80);
+$(".img-2").hide();
+$(".img-2").animate({left:25,top:-25, opacity:"show"},100);
+        $(".img-2").removeAttr("src", "./image/index.jpg");
+        $(".img-2").removeAttr("src", "./image/gather-2.jpg");
+        $(".img-2").attr("src", "./image/gather-1.png");
+        $(".img-3").hide();
+$(".img-3").animate({left:-35,top:35},80);
+$(".img-3").hide();
+$(".img-3").animate({left:50,top:-50, opacity:"show"},100); 
+        $(".img-3").removeAttr("src", "./image/gather-1.png");
+        $(".img-3").removeAttr("src", "./image/gather-2.jpg");
+        $(".img-3").attr("src", "./image/index.jpg"); 
     });
     $("#two").click(function(){
         var a = document.getElementsByTagName("img")[0].getAttribute("src");
@@ -142,9 +166,17 @@ $(Document).ready(function(){
         var c = document.getElementsByTagName("img")[2].getAttribute("src");
             $(".img-1").animate({left:25,top:-25, opacity:"hide"}, 100);
             $(".img-1").animate({left:0,top:0, opacity:"show"}, 200);
+            $(".img-3").hide();
+$(".img-3").animate({left:-35,top:35},80);
+$(".img-3").hide();
+$(".img-3").animate({left:50,top:-50, opacity:"show"},100); 
             $(".img-3").removeClass("src", a);
             $(".img-3").removeAttr("src", c);
             $(".img-3").attr("src",b);
+            $(".img-2").hide();
+$(".img-2").animate({left:-15,top:15},80);
+$(".img-2").hide();
+$(".img-2").animate({left:25,top:-25, opacity:"show"},100);
             $(".img-2").removeClass("src", a);
             $(".img-2").removeAttr("src", c);
             $(".img-2").attr("src", a);
@@ -160,9 +192,17 @@ $(Document).ready(function(){
       var c = document.getElementsByTagName("img")[2].getAttribute("src");
           $(".img-1").animate({left:25,top:-25, opacity:"hide"}, 100);
           $(".img-1").animate({left:0,top:0, opacity:"show"}, 200);
+          $(".img-3").hide();
+$(".img-3").animate({left:-35,top:35},80);
+$(".img-3").hide();
+$(".img-3").animate({left:50,top:-50, opacity:"show"},100);
           $(".img-3").removeClass("src", a);
           $(".img-3").removeAttr("src", c);
           $(".img-3").attr("src",a);
+          $(".img-2").hide();
+$(".img-2").animate({left:-15,top:15},80);
+$(".img-2").hide();
+$(".img-2").animate({left:25,top:-25, opacity:"show"},100);
           $(".img-2").removeClass("src", a);
           $(".img-2").removeAttr("src", c);
           $(".img-2").attr("src", c);
@@ -176,5 +216,3 @@ $(Document).ready(function(){
 </script>
 
 </html>
-
-
