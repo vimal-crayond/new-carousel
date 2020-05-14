@@ -48,6 +48,8 @@
         img{
             width: 400px;
             height: auto;
+            border: 25px solid white;
+            box-shadow:-10px 8px 10px 1px #aaaaaa;
         }
         .top-margin{
             margin-top: 100px;
@@ -166,6 +168,14 @@ $(".img-3").animate({left:50,top:-50, opacity:"show"},100);
         var a = document.getElementsByTagName("img")[0].getAttribute("src");
         var b = document.getElementsByTagName("img")[1].getAttribute("src");
         var c = document.getElementsByTagName("img")[2].getAttribute("src");
+        var button_a = document.getElementsByClassName("span1");
+      var button_b = document.getElementsByClassName("span2");
+      var button_c = document.getElementsByClassName("span3");
+      $(button_c).removeClass("active");
+        $(button_b).removeClass("active");
+        $(button_a).removeClass("active");
+        
+        
             $(".img-1").animate({left:25,top:-25, opacity:"hide"}, 100);
             $(".img-1").animate({left:0,top:0, opacity:"show"}, 200);
             $(".img-3").hide();
@@ -187,11 +197,32 @@ $(".img-2").animate({left:25,top:-25, opacity:"show"},100);
             $(".img-1").removeAttr("src", c);
             $(".img-1").attr("src", c);
             },200);
+            var src1 = "./image/gather-2.jpg"; 
+          var src2 = "./image/gather-1.jpg";
+          var src3 = "./image/index.png";
+            if(b === src1 ){
+            $(button_c).addClass("active");
+          }
+          else if(b === src2 ){
+            $(button_b).addClass("active");
+          }
+          else if(b === src3 ){
+            $(button_a).addClass("active");
+          }
     });  
     $("#one").click(function(){
+        
       var a = document.getElementsByTagName("img")[0].getAttribute("src");
+    //   alert(a)
       var b = document.getElementsByTagName("img")[1].getAttribute("src");
       var c = document.getElementsByTagName("img")[2].getAttribute("src");
+      var button_a = document.getElementsByClassName("span1");
+      var button_b = document.getElementsByClassName("span2");
+      var button_c = document.getElementsByClassName("span3");
+      $(button_c).removeClass("active");
+        $(button_b).removeClass("active");
+        $(button_a).removeClass("active");
+        
           $(".img-1").animate({left:25,top:-25, opacity:"hide"}, 100);
           $(".img-1").animate({left:0,top:0, opacity:"show"}, 200);
           $(".img-3").hide();
@@ -212,7 +243,21 @@ $(".img-2").animate({left:25,top:-25, opacity:"show"},100);
           $(".img-1").removeClass("src", a);
           $(".img-1").removeAttr("src", c);
           $(".img-1").attr("src", b);
+        //   debugger
           },200);
+          var src1 = "./image/gather-2.jpg"; 
+          var src2 = "./image/gather-1.jpg";
+          var src3 = "./image/index.png";
+         
+          if(a === src1 ){
+            $(button_c).addClass("active");
+          }
+          else if(a === src2 ){
+            $(button_b).addClass("active");
+          }
+          else if(a === src3 ){
+            $(button_a).addClass("active");
+          }
     });       
 });
 </script>
