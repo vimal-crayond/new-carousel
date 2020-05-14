@@ -201,13 +201,14 @@ $(".img-2").animate({left:25,top:-25, opacity:"show"},100);
           var src2 = "./image/gather-1.jpg";
           var src3 = "./image/index.png";
             if(b === src1 ){
-            $(button_c).addClass("active");
+                $(button_a).addClass("active");
+            
           }
           else if(b === src2 ){
             $(button_b).addClass("active");
           }
           else if(b === src3 ){
-            $(button_a).addClass("active");
+            $(button_c).addClass("active");
           }
     });  
     $("#one").click(function(){
@@ -250,13 +251,15 @@ $(".img-2").animate({left:25,top:-25, opacity:"show"},100);
           var src3 = "./image/index.png";
          
           if(a === src1 ){
-            $(button_c).addClass("active");
+            $(button_a).addClass("active");
+
           }
           else if(a === src2 ){
             $(button_b).addClass("active");
           }
           else if(a === src3 ){
-            $(button_a).addClass("active");
+            $(button_c).addClass("active");
+
           }
     });       
 });
